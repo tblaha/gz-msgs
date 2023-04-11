@@ -1,0 +1,26 @@
+syntax = "proto3";
+package gz.msgs;
+option java_package = "com.gz.msgs";
+option java_outer_classname = "WorldOdomProtos";
+
+import "gz/msgs/vector3d.proto";
+import "gz/msgs/header.proto";
+import "gz/msgs/quaternion.proto";
+
+message WorldOdom
+{
+  /// \brief Optional header data.
+  Header header          = 1;
+
+  /// \brief Pose in 3d space.
+  Vector3d position      = 2;
+
+  /// \brief Pose in 3d space.
+  Quaternion orientation = 3;
+
+  /// \brief Linear velocity in 3d space (world reference).
+  Vector3d velocity      = 4;
+
+  /// \brief Linear acceleration in 3d space (world reference).
+  Vector3d acceleration  = 5;
+}

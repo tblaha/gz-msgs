@@ -1,0 +1,14 @@
+syntax = "proto3";
+package gz.msgs;
+option java_package = "com.gz.msgs";
+option java_outer_classname = "NonsenseProtos";
+
+import "gz/msgs/header.proto";
+
+message Nonsense
+{
+  /// \brief Optional header data.
+  Header header          = 1;
+
+  int32 number           = 2;
+}
